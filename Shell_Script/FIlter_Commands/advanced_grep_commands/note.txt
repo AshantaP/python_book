@@ -1,0 +1,65 @@
+===================================
+Advanced GRep : -f, -e, -E
+================================
+
+NOte: Pattern is a string and it represents more than one string
+
+
+- "-f" : Takes search string/pattern from a file, one per line
+ex: grep -f "filename_which_contains_lines_word" "filename_which_contains_lines_word
+
+
+
+- "-e" :
+ex: grep -e "text" -e "text1" -e "text2" text.txt OR
+grep -E "line|above|python|bash|shell" text.txt
+
+
+- "-E" : grep -E "line|above|python|bash|shell" text.txt
+
+
+========================================================
+RULES TO CREATE PATTERNS
+========================================================
+
+1- XY|PQ Matches for xy or PQ
+2- ^xyz matches for the lines which are starting with "xyz"
+    ex: grep -E "^this" test.txt    "This command will find the lines which starts from *this
+
+3- xyz$ matches for the lines which are ending with xyz
+    ex: rep -E "this$" test.txt
+
+4- ^$ Matches for the lines which are empty
+
+5- \ TO remove the special purpose of any symbol. Ex: \^\$
+    ex: grep -E "\^" text.txt
+
+6- . Matches any one character
+    ex: grep -E "t..s" text.txt
+
+7- \. matches exactly wth .
+    ex: grep -E "\." text.txt
+
+8- \b match the empty string at the edge of word.
+    ex: grep -E "\bline" test.txt #This will print the lines before the space
+        grep -E "line/b" test.txt #This will print the lines after the space
+
+9- ? The preceding character is optional and will be matched, at most, once
+    ex: grep -E "yf?" text.txt
+
+
+10- * The preceding character will be matched zero or more times.
+    ex: grep -E "yf*" text.txt
+
+11- + THe preceding character will be matched one or more times.
+    ex: rep -E "yf+" text.txt
+
+12- [xyz] : Matches for the lines which are having x or y or zero
+    ex: grep -E "[XYZ]" test.txt
+    
+
+
+
+
+
+
