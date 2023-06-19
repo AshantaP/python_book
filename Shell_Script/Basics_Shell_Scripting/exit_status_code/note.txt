@@ -1,0 +1,20 @@
+Each linux command returns a status code
+
+1- Zero (0) : This means your command execuated successfully.
+2- if it returns other than zero, That means it's an error
+
+HOw to check if your last command run successfully or failed ?
+- echo $?   #This will print exit code either zero or any number other than zero.
+
+
+===============================================
+IMPORTANT NOTE
+===============================================
+
+CODE:
+    - 127: COmmand not found
+    - 1: Command failed during execution
+    - 2: Incorrect command usage etc .....
+
+
+    

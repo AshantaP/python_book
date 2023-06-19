@@ -1,0 +1,8 @@
+There are two types are variabl.
+
+1- System defined variables
+2- User defined variables
+
+ex: open terminal --> type "env"
+YOu will see all the system defined variables.
+

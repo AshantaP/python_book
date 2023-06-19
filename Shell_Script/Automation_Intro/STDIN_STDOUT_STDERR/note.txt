@@ -1,0 +1,23 @@
+Redirection Operator & STDIN,STDOUT,STDERR
+
+===================================================
+
+1- OutPut Redirection operator:
+    - > TO create a new file
+    - >> TO append the content
+
+2- Input Redirection operator:
+    - < To provide the Input
+
+3- Combining Redirection Operation.
+    - | TO send the standard output of one command to another command as standard input.
+
+4 - Store the java version into a file using Redirection Operation ?
+    - How to separate STDOUT & STDERR ?
+    - Solution: Using file descriptor
+
+5- A file descriptor is simply an integer number to identify STDIN, STDOUT, STDERR
+    - 0 : STDIN
+    - 1 : STDOUT
+    - 2 : STDERR
+
