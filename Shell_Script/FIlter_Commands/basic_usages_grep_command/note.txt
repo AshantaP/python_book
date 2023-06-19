@@ -1,0 +1,88 @@
+GREP command is used to search a string in a given file
+
+=====================================================
+GREP Syntax
+=============================================
+
+grep [option]"string/pattern" file/files
+cat file | grep[options]"string/pattern
+echo "some text" | grep [option] "string/pattern"
+
+==========================================
+Basic options
+============================================
+-i, -w, -v, -o, -n, -c, -A, -B, -C, -r, -l, -h
+
+    - grep "string/pattern" file/files
+
+
+============================================
+OPtions overview
+============================================
+- "i" : hypen-i can be used to ignore case sensivity for matching/searching
+ex: grep -i "Above" test.text 
+
+- "-w" : This is used to find the exact work (Ex: line & not from lines) (To match a whoel word)
+ex: grep -w "ABove" text.text
+
+- "-v" : To display the lines which are not having given string or text
+ex: grep -v "above" text.text   #This command will try to find the lines which doesn't contain the word "above"
+
+- "-o" : To print the exact searched word not the lines.
+ex: grep -o "above" test.text
+
+- "-n" : To display the matched line numbers.
+ex: grep -n "above" text.txt
+
+- "c" : To display the matched number of lines
+ex: grep -c "above" text.txt
+
+==================================
+IMPORTANT
+================================
+- "-A" : This command will print the word "above" with it's next line.
+ex: grep -A 1 "above" test.txt  #Here one is nothing but the next oneline after finding the matching word "above"
+
+- "-B" : This command will print the word "above" with it's previous line.
+ex: grep -B 1 "above" text.txt  #
+
+- "-C" : This command will print the word "above" with it's prev & next lines.
+ex: grep -C 1 "above" text.txt
+
+grep "bash" * #This will try to search inside the current directory not the sub-directory
+grep -r "bash" * #THis command will search inside the current and it's sub-directory
+
+- "l" : TO display only file names
+ex: grep -l "above" *   #This command will find only file names where the "above" word is written or found.
+
+- "h" : TO hide file names
+ex: grep -h "bash" * #THis will hide the filename & it will only show the contents.
+
+
+
+ex: httpd --version | grep "version"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
