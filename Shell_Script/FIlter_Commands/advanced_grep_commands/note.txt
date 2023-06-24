@@ -57,6 +57,29 @@ RULES TO CREATE PATTERNS
 12- [xyz] : Matches for the lines which are having x or y or zero
     ex: grep -E "[XYZ]" test.txt
     
+13- [a-d] : is equal to [abcd] matched for the lines which are having a/b/b/d
+    ex: grep -E "a|b|c|d" test.txt
+    ex: grep -E "[a-f]" test.txt
+
+14- [a-ds-z]is equal to [abcdstuvwxzyz]
+    ex: grep -E "[a-ds-z]" test.txt
+
+15- ^[abc] matches for the lines which are starting with a/b/character
+    ex: grep -E "^[XY"] test.txt
+    ex: grep -E "[^xy] test.txt #This command will search the words other than x or y.
+
+16- {N} : The preceding string matched exactly N Time.
+    ex: grep -E "xf{4}" test.txt    #This command will try to find f four times.
+    ex: grep -E "xf{4,5,6,}"\b test.txt #This command will try to find f 4/5/6 times.
+    ex: grep -E "xf{2,}" test.txt       #This command will try to find more than 2 times.
+
+    
+
+
+
+
+
+
 
 
 

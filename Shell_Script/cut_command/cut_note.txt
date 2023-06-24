@@ -1,0 +1,59 @@
+The "cut" command is a powerful tool to extract parts of the each line from a file.
+It's based on 
+    - BYte position
+    - Character position
+    - Fields based on delimeter (By default delimeter is the tab)
+
+Note: If characters are separated by "tab" then automatically cut command will filter the Fields
+BUt if the characters are separted by filed separator":" then you will have to use delimeter.
+
+
+CUt command syntax:
+
+cut [options] <position(fields)> /range of position('field)> <input_file>
+
+cat file | cut [options] <position(fields) /range of position(fields)>
+
+options: -b -c and -f
+
+rages:
+    2 : only second byte/characters/field
+    -2: first to two
+    3,6 : Third to six
+
+
+==================================================================
+IMPORTANT
+=================================================================
+
+1- tO CUT OUT a section of a line by specifying a byte/characters position use the -b.-c options
+
+SYntax:
+    - cut -b <position>/range of position> file
+    - cut -c <position's/range of position> file
+    - position: 3,5,10
+    - Range of position: 3-7, 6-10
+
+use --complement to complement the output
+
+
+2- TO cut out a section of a line by specifying a field position use the -f position
+
+Assume fields are like columns, by default cut command will separates columns based on tab(delimeter)
+
+if we want to use different field separator use -d (delimeter)
+
+synatx:
+    - cut -f <position's/range of position> file
+    - cut -f <position's/range of position> [-d] [--output-delimeter="**] filename
+    -d is a deli like @, :/etc ....
+    - position's : 3,5,2
+    - Range of position's: 3-7,6-10
+
+Use -s option with -f to ignore the line do not contain a delimeter
+
+cut -f -7,9 --output-delimeter="" mytext.txt
+
+
+
+
