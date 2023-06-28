@@ -1,0 +1,14 @@
+============Note==================
+httpd -v
+
+httpd -v | aws '/version/ {print}'
+
+
+The awk command is a powerful method for processing or analyzing text or data files,
+which are organized by lines (rows or records) and columns(fields).
+
+We can use awsk as a linux command and also as a scripting languages like bash shell scripting
+
+simple aws command syntax
+    - awk [options] '[selection_criteraia] {action}' input-file
+

@@ -1,0 +1,10 @@
+============RealTime Works==================
+
+Question-1: Finding the string lenth.
+Ans: my_name="#shell"
+echo ${my_name}
+
+
+Question-2: Concatenation of strings/Join two or more paths
+Ans: 
+
