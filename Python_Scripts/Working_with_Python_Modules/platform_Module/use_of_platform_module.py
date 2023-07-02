@@ -9,7 +9,6 @@ print(platform.platform())
 #print(dir(platform))
 #To get more insights to platform module
 #print(help(platform))
-
-
-
+sys_info=(platform.java_ver())
+print(sys_info)
 
